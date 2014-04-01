@@ -4,7 +4,6 @@
 VAGRANTFILE_API_VERSION = "2"
 options = {}
 options[:tag] = ENV['tag'] || 'app'
-options[:version] = ENV['version'] || '2.1.1'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "cenos65"
