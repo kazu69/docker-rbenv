@@ -15,7 +15,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "docker" do |d|
     d.pull_images "centos"
     d.build_image "./project", args: "-t #{options[:tag]}"
-    #d.run image: "#{options[:tag]}"
   end
 
 end
