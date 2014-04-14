@@ -1,7 +1,12 @@
 #!/bin/bash
 
 FILE=$1
-for line in  $(cat $FILE)
+
+if [ -n $FILE ]; then
+  FILE='/root/.ruby-version'
+fi
+
+for VERSION in  $(cat $FILE)
 do
-  rbenv install "$line"
+  rbenv install "$VERSION"
 done
